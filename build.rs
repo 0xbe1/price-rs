@@ -1,5 +1,4 @@
 use ethers::prelude::*;
-
 use eyre::Result;
 
 fn main() -> Result<()> {

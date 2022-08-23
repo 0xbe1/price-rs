@@ -1,8 +1,10 @@
-mod abi;
+use std::sync::Arc;
 
 use ethers::prelude::*;
 use eyre::Result;
-use std::sync::Arc;
+
+#[rustfmt::skip]
+mod abi;
 
 // Copy-and-paste from https://github.com/gakonst/ethers-rs/blob/master/examples/uniswapv2.rs
 #[tokio::main]
