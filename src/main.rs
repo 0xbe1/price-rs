@@ -6,7 +6,7 @@ use eyre::Result;
 #[rustfmt::skip]
 mod abi;
 
-// Copy-and-paste from https://github.com/gakonst/ethers-rs/blob/master/examples/uniswapv2.rs
+// Modified from https://github.com/gakonst/ethers-rs/blob/master/examples/uniswapv2.rs
 #[tokio::main]
 async fn main() -> Result<()> {
     let client = Provider::<Http>::try_from(
