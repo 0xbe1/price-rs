@@ -1,15 +1,8 @@
+mod abi;
+
 use ethers::prelude::*;
 use eyre::Result;
 use std::sync::Arc;
-
-// Generate the type-safe contract bindings by providing the ABI
-// definition in human readable format
-abigen!(
-    IUniswapV2Pair,
-    r#"[
-        function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast)
-    ]"#,
-);
 
 // Copy-and-paste from https://github.com/gakonst/ethers-rs/blob/master/examples/uniswapv2.rs
 #[tokio::main]
@@ -21,7 +14,7 @@ async fn main() -> Result<()> {
 
     // ETH/USDT pair on Uniswap V2
     let address = "0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852".parse::<Address>()?;
-    let pair = IUniswapV2Pair::new(address, Arc::clone(&client));
+    let pair = abi::uniswap_v2_pair::UniswapV2Pair::new(address, Arc::clone(&client));
 
     // getReserves -> get_reserves
     let (reserve0, reserve1, _timestamp) = pair.get_reserves().call().await?;
