@@ -14,9 +14,7 @@ pub async fn get_price(pair_address: &str) -> Result<f64> {
         "https://mainnet.infura.io/v3/c60b0bb42f8a4c6481ecd229eddaca27",
     )?;
     let client = Arc::new(client);
-    let uniswap_price = get_uniswap_price(client, pair_address)
-        .await
-        .unwrap();
+    let uniswap_price = get_uniswap_price(client, pair_address).await.unwrap();
     Ok(uniswap_price)
 }
 
