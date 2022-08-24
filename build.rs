@@ -11,5 +11,8 @@ fn main() -> Result<()> {
     Abigen::new("UniswapV2Route02", "abi/UniswapV2Route02.json")?
         .generate()?
         .write_to_file("src/abi/uniswap_v2_route_02.rs")?;
+    Abigen::new("YearnLensOracle", "abi/YearnLensOracle.json")?
+        .generate()?
+        .write_to_file("src/abi/yearn_lens_oracle.rs")?;
     Ok(())
 }
