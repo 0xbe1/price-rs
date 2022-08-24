@@ -1,4 +1,4 @@
-use ethers::prelude::*;
+use ethers::contract::Abigen;
 use eyre::Result;
 
 fn main() -> Result<()> {
