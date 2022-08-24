@@ -1,4 +1,2 @@
 /target
 .idea
-src/abi/*
-!src/abi/mod.rs
