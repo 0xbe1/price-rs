@@ -1,7 +1,12 @@
 [package]
 name = "price-rs"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+license = "MIT"
+authors = ["0xbe1 <0xbetrue@gmail.com>"]
+description = "Price all ERC20 tokens."
+repository = "https://github.com/0xbe1/price-rs"
+readme = "README.md"
 
 [dependencies]
 eyre = "0.6"
