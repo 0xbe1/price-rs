@@ -10,7 +10,6 @@ readme = "README.md"
 
 [dependencies]
 eyre = "0.6"
-tokio = { version = "1.18", features = ["macros", "rt-multi-thread"] }
 ethers = { version = "0.17.0", features = ["abigen"] }
 bigdecimal = "0.3.0"
 serde_json = "1.0"
@@ -20,3 +19,6 @@ serde = "1.0"
 [build-dependencies]
 eyre = "0.6"
 ethers = { version = "0.17.0", features = ["abigen"] }
+
+[dev-dependencies]
+tokio = { version = "1.18", features = ["macros", "rt-multi-thread"] }
